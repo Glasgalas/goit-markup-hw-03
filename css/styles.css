@@ -18,7 +18,7 @@ html {
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -43,12 +43,22 @@ html {
   color: var(--main-color);
 }
 
-.list {list-style: none;}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 /* Верхняя линия */
 header {
-  height: 80px;
-  border: 1px solid #ECECEC;
+  /* height: 80px; */
+  border-bottom: 1px solid #ECECEC;
 }
 
 .logo, .logo-foot {
@@ -89,15 +99,20 @@ header {
   color: var(--accent-color);
 }
 
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 nav, .site-nav, .contacts-nav {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: center; 
 }
 
 .header-nav {
   display: flex;
-  height: 80px;
+  align-items: center;
 }
 
 .contacts-nav {
@@ -119,13 +134,16 @@ nav, .site-nav, .contacts-nav {
 
 /* Шапка */
 .order {
+  padding-top: 200px;
+  padding-bottom: 200px;
   height: 600px;
   background-color: var(--bg-foot-color);
   text-align: center;
 }
 
 .order-title {
-  padding: 200px 452px 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -150,14 +168,17 @@ nav, .site-nav, .contacts-nav {
 }
 
 /* Особенности */
+.features {
+  padding-top: 94px;
+}
+
 .feature {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 94px;
 }
 
 .feature > .item {
- width: 270px;
+ width: calc((100% - 90px) / 4);
 }
 
 .feature > .item:not(:last-child) {
@@ -181,18 +202,25 @@ nav, .site-nav, .contacts-nav {
 }
 
 /* Чем мы занимаемся */
-.work-items {
-  display: flex;
-  margin-bottom: 94px;
+.work {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.work-items > .item:not(:last-child) {
+.work-items {
+  display: flex;
+}
+
+.work-card {
+  width: calc((100% - 60px) / 3);
+}
+.work-card:not(:last-child) {
   margin-right: 30px;
 }
 
 .work-title {
-  margin-top: 94px;
-  margin-bottom: 50px;
+  margin-top: 0;
+  margin-bottom: 50px; 
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -203,15 +231,12 @@ nav, .site-nav, .contacts-nav {
 
 /* Наша команда */
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--team-color);
 }
 
-.team-items {
-  justify-content: center;
-}
-
 .team-title {
-  padding-top: 94px;
   margin-top: 0px;
   margin-bottom: 50px;
   font-weight: 700;
@@ -223,7 +248,8 @@ nav, .site-nav, .contacts-nav {
 }
 
 .team-name {
-  padding-top: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -233,8 +259,7 @@ nav, .site-nav, .contacts-nav {
 }
 
 .team-text {
-  padding-top: 10px;
-  margin-bottom: 30px;
+  margin: 0;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -243,7 +268,7 @@ nav, .site-nav, .contacts-nav {
 
 .team-items {
   display: flex;
-  padding-bottom: 94px;
+  justify-content: center;
 }
 
 .team-card:not(:last-child) {
@@ -251,14 +276,21 @@ nav, .site-nav, .contacts-nav {
 }
 
 .team-card {
+  width: calc((100% - 90px) / 4);
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 /* Подвал */
 .footer {
   padding-top: 60px;
+  padding-bottom: 60px;
   height: 252px;
   background-color: var(--bg-foot-color);
 }
@@ -272,21 +304,29 @@ nav, .site-nav, .contacts-nav {
   color: var(--bg-color);
 }
 
-.contacts-foot li {
-  margin-top: 9px;
+.contacts-foot {
+  padding-top: 9px;
+}
+
+.contacts-foot li:first-child {
+  margin-bottom: 9px;
 }
 
 /* Портфолио */
+.projects {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .filter-menu {
   display: flex;
   margin: auto;
+  padding-bottom: 50px;
   justify-content: center;
 }
 
-.filter-item {
-  margin-top: 94px;
+.filter-item:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 50px;
 }
 
 .filter-item button {
@@ -310,12 +350,15 @@ nav, .site-nav, .contacts-nav {
 .projects-items {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 94px;
+}
+
+.project-inner {
+  padding: 20px 24px;
 }
 
 .project-title {
-  margin-top: 20px;
-  margin-left: 24px;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -324,15 +367,21 @@ nav, .site-nav, .contacts-nav {
 }
 
 .project-text {
-  margin-top: 4px;
-  margin-left: 24px;
+  margin: 0;
   font-size: 16px;
   line-height: 1.8;
   color: var(--main-color);
 }
 
-.projects h1 {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .project a {
@@ -340,7 +389,7 @@ nav, .site-nav, .contacts-nav {
 }
 
 .project {
-  width: 370px;
+  width: calc((100% - 60px) / 3);
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
   box-sizing: border-box;

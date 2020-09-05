@@ -186,6 +186,7 @@ nav, .site-nav, .contacts-nav {
 }
 
 .feature-title {
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -196,6 +197,7 @@ nav, .site-nav, .contacts-nav {
 }
 
 .feature-text {
+  margin: 0;
   font-size: 14px; 
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -321,7 +323,7 @@ nav, .site-nav, .contacts-nav {
 .filter-menu {
   display: flex;
   margin: auto;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
